@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './App.module.css'
-import HW1, { message0 } from '../s2-homeworks/hw01/HW1'
-import { MessagePropsType } from '../s2-homeworks/hw01/message/Message';
+import HW1 from '../s2-homeworks/hw01/HW1'
 
 function App() {
     return (
@@ -18,4 +17,4 @@ function App() {
     )
 }
 
-export default App;
+export default App

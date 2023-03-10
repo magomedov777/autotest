@@ -1,41 +1,34 @@
 import React from 'react'
 import s from './Message.module.css'
 
-
-
 // нужно создать правильный тип вместо any
-export type MessagePropsType = {
-    message: string
-    id: number
-    text: string
-    time: string
-}
+export type MessagePropsType = any
 
 // нужно отобразить приходящие данные
 const Message = (props: MessagePropsType) => {
     return (
-        <div id={'hw1-message-' + props.message} className={s.message}>
+        <div id={'hw1-message-' + props.message.id} className={s.message}>
             <div className={s.imageAndText}>
                 <img
-                    id={'hw1-avatar-' + props.id}
+                    id={'hw1-avatar-' + props.message.id}
                     // создаёт студент
 
                     //
                 />
                 <div className={s.text}>
-                    <div id={'hw1-name-' + props.message} className={s.name}>
+                    <div id={'hw1-name-' + props.message.id} className={s.name}>
                         {/*создаёт студент*/}
 
                         {/**/}
                     </div>
-                    <pre id={'hw1-text-' + props.id} className={s.messageText}>
+                    <pre id={'hw1-text-' + props.message.id} className={s.messageText}>
                         {/*создаёт студент*/}
 
                         {/**/}
                     </pre>
                 </div>
             </div>
-            <div id={'hw1-time-' + props.id} className={s.time}>
+            <div id={'hw1-time-' + props.message.id} className={s.time}>
                 {/*создаёт студент*/}
 
                 {/**/}
@@ -44,4 +37,4 @@ const Message = (props: MessagePropsType) => {
     )
 }
 
-export default Message;
+export default Message
