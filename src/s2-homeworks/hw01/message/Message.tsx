@@ -7,6 +7,8 @@ import s from './Message.module.css'
 export type MessagePropsType = {
     message: string
     id: number
+    text: string
+    time: string
 }
 
 // нужно отобразить приходящие данные
