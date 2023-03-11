@@ -1,38 +1,40 @@
 import React from 'react'
 import s from './Message.module.css'
-import { MessageUserType } from '../HW1'
+import { MessageType, MessageUserType } from '../HW1'
 
 // нужно создать правильный тип вместо any
 export type MessagePropsType = {
-    id: number
-    message: MessageUserType
+   message: MessageType
+
 }
+
+
 
 // нужно отобразить приходящие данные
 const Message = (props: MessagePropsType) => {
     return (
-        <div id={'hw1-message-' + props.id} className={s.message}>
+        <div id={'hw1-message-' + props.message.id} className={s.message}>
             <div className={s.imageAndText}>
                 <img
-                    id={'hw1-avatar-' + props.id}
-                    // создаёт студент
+                    id={'hw1-avatar-' + props.message.id}
+                  src={props.message.user.avatar}
 
-                    //
+                    
                 />
                 <div className={s.text}>
-                    <div id={'hw1-name-' + props.id} className={s.name}>
+                    <div id={'hw1-name-' + props.message.id} className={s.name}>
                         {/*создаёт студент*/}
 
                         {/**/}
                     </div>
-                    <pre id={'hw1-text-' + props.id} className={s.messageText}>
+                    <pre id={'hw1-text-' + props.message.id} className={s.messageText}>
                         {/*создаёт студент*/}
 
                         {/**/}
                     </pre>
                 </div>
             </div>
-            <div id={'hw1-time-' + props.id} className={s.time}>
+            <div id={'hw1-time-' + props.message.message.time} className={s.time}>
                 {/*создаёт студент*/}
 
                 {/**/}

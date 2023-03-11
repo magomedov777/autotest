@@ -1,10 +1,11 @@
 import React from 'react'
+import { MessageType } from '../HW1'
 import s from './FriendMessage.module.css'
 
 // создать тип вместо any и отобразить приходящие данные
 
 export type FriendMessage = {
-    id: number
+    message: MessageType
 
 }
 
@@ -12,19 +13,19 @@ export type FriendMessage = {
 const FriendMessage = (props: FriendMessage) => {
     return (
         <div
-            id={'hw1-friend-message-' + props.id}
+            id={'hw1-friend-message-' + props.message.id}
             className={s.friendMessage}
         >
             <div className={s.friendImageAndText}>
                 <img
-                    id={'hw1-friend-avatar-' + props.id}
+                    id={'hw1-friend-avatar-' + props.message.id}
                     // создаёт студент
 
                     //
                 />
                 <div className={s.friendText}>
                     <div
-                        id={'hw1-friend-name-' + props.id}
+                        id={'hw1-friend-name-' + props.message.id}
                         className={s.friendName}
                     >
                         {/*создаёт студент*/}
@@ -32,7 +33,7 @@ const FriendMessage = (props: FriendMessage) => {
                         {/**/}
                     </div>
                     <pre
-                        id={'hw1-friend-text-' + props.id}
+                        id={'hw1-friend-text-' + props.message.id}
                         className={s.friendMessageText}
                     >
                         {/*создаёт студент*/}
@@ -42,7 +43,7 @@ const FriendMessage = (props: FriendMessage) => {
                 </div>
             </div>
             <div
-                id={'hw1-friend-time-' + props.id}
+                id={'hw1-friend-time-' + props.message.id}
                 className={s.friendTime}
             >
                 {/*создаёт студент*/}
