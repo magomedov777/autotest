@@ -13,13 +13,14 @@ export type FriendMessage = {
 const FriendMessage = (props: FriendMessage) => {
     return (
         <div
-            id={'hw1-friend-message-' + props.message.id}
+            id={'hw1-friend-message-' + props.message.message.text}
             className={s.friendMessage}
         >
             <div className={s.friendImageAndText}>
                 <img
-                    id={'hw1-friend-avatar-' + props.message.id}
-                    // создаёт студент
+                    id={'hw1-friend-avatar-' + props.message.message.text}
+                     src={props.message.user.avatar}
+                     alt={'text'}
 
                     //
                 />
@@ -28,7 +29,7 @@ const FriendMessage = (props: FriendMessage) => {
                         id={'hw1-friend-name-' + props.message.id}
                         className={s.friendName}
                     >
-                        {/*создаёт студент*/}
+                        {props.message.id}
 
                         {/**/}
                     </div>
@@ -36,7 +37,7 @@ const FriendMessage = (props: FriendMessage) => {
                         id={'hw1-friend-text-' + props.message.id}
                         className={s.friendMessageText}
                     >
-                        {/*создаёт студент*/}
+                        {props.message.id}
 
                         {/**/}
                     </pre>
@@ -46,7 +47,7 @@ const FriendMessage = (props: FriendMessage) => {
                 id={'hw1-friend-time-' + props.message.id}
                 className={s.friendTime}
             >
-                {/*создаёт студент*/}
+                {props.message.message.time}
 
                 {/**/}
             </div>

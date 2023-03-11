@@ -38,7 +38,7 @@ export type MessageUserType = {
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: './avatar.png', // можно менять
+        avatar: avatar, // можно менять
         name: 'Some Name',  // можно менять
     },
     message: {
@@ -49,7 +49,7 @@ export const message0: MessageType = {
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: './avatar.png', // можно менять
+        avatar: avatar, // можно менять
         name: 'Friend Name', // можно менять
     },
     message: {
