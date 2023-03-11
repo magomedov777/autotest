@@ -25,19 +25,19 @@ const Message = (props: MessagePropsType) => {
                     <div id={'hw1-name-' + props.message.id} className={s.name}>
                         {props.message.message.text}
 
-                        {/**/}
+                        {props.message.message.time}
                     </div>
                     <pre id={'hw1-text-' + props.message.id} className={s.messageText}>
                         {props.message.message.text}
 
-                        {/**/}
+                        {props.message.message.time}
                     </pre>
                 </div>
             </div>
             <div id={'hw1-time-' + props.message.message.time} className={s.time}>
                 {props.message.message.time}
 
-                {/**/}
+                {props.message.message.time}
             </div>
         </div>
     )
