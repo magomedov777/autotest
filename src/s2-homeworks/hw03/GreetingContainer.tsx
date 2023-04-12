@@ -9,8 +9,8 @@ type GreetingContainerPropsType = {
 
 export const pureAddUser = (name: string, setError:  (name: string) => void, setName:  (name: string) => void, addUserCallback: (name: string) => void) => {
     // если имя пустое - показать ошибку: setError('Ошибка! Введите имя!'),
-    if(name.trim() === ''){
-        setError('Error')
+    if(!name.trim()){
+        setError('Ошибка! Введите имя')
     }else {
         addUserCallback(name)
         setName('')
@@ -21,8 +21,8 @@ export const pureAddUser = (name: string, setError:  (name: string) => void, set
 }
 
 export const pureOnBlur = (name: string, setError: (error: string) => void) => { // если имя пустое - показать ошибку
-    if(name === ''){
-        setError('error')
+    if(!name.trim()){
+        setError('Ошибка! Введите имя')
     }
 }
 
@@ -46,16 +46,16 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
         // setName('some name') // need to fix
-        const trimmedName = e.currentTarget.value.trim()
-        if(trimmedName){
-            setName(trimmedName)
-            setError('')
-        }else {
-            setName('')
-            setError('name is required')
-        }
-
-        // error && setError('')
+        // const trimmedName = e.currentTarget.value.trim()
+        // if(trimmedName){
+        //     setName(trimmedName)
+        //     setError('')
+        // }else {
+        //     setName('')
+        //     setError('name is required')
+        // }
+        setName(e.currentTarget.value)
+         error && setError('')
     }
     const addUser = () => {
       
@@ -73,9 +73,10 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
-       if(e.key === 'Enter' && name){
-        addUser()
-       }
+       // if(e.key === 'Enter' && name){
+       //  addUser()
+       // }
+        pureOnEnter(e, addUser)
     }
 
     const totalUsers = users.length // need to fix
