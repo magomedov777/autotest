@@ -21,7 +21,8 @@ export const pureAddUser = (name: string, setError:  (name: string) => void, set
 }
 
 export const pureOnBlur = (name: string, setError: (error: string) => void) => { // если имя пустое - показать ошибку
-    if(!name.trim()){
+    if(name.trim().length === 0){
+        console.log('error')
         setError('Ошибка! Введите имя')
     }
 }
@@ -69,6 +70,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const onBlur = () => {
         // все тоже самое, что и в addUser -функция стрелочник
         // всего лишь получает сигнали из компоненты <Greeting/> и вызывает pureOnBlur (с кучкой аргументов)
+
         pureOnBlur(name, setError)
     }
 
