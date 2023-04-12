@@ -1,5 +1,5 @@
 import React from 'react'
-import { MessageType } from '../HW1'
+import {MessageType} from '../HW1'
 import s from './FriendMessage.module.css'
 
 // создать тип вместо any и отобразить приходящие данные
@@ -19,8 +19,8 @@ const FriendMessage = (props: FriendMessage) => {
             <div className={s.friendImageAndText}>
                 <img
                     id={'hw1-friend-avatar-' + props.message.message.text}
-                     src={props.message.user.avatar}
-                     alt={'text'}
+                    src={props.message.user.avatar}
+                    alt={'text'}
 
                     //
                 />

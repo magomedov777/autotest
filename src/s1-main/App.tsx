@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './App.module.css'
+import HW2 from '../s2-homeworks/hw02/HW2'
 import HW1 from '../s2-homeworks/hw01/HW1'
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
         <div className={s.App}>
             <HW1/>
             {/*раскомментировать по ходу выполнения*/}
-            {/*<HW2/>*/}
+            <HW2/>
             {/*<HW3/>*/}
             {/*<HW4/>*/}
 
