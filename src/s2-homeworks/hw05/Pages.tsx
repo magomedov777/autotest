@@ -16,10 +16,21 @@ function Pages() {
         <div>
             {/*Routes выбирает первый подходящий роут*/}
             <Routes>
+                <Route path={'/'} element={<Navigate to={PATH.PRE_JUNIOR}/>}/>
+                <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
+                <Route path={'/*'} element={<Error404/>}/>
+
                 {/*роутинг будут писать студенты*/}
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
                 {/*<Route ...*/}
+                <Route path={'/'} element={<Navigate to={PATH.JUNIOR}/>}/>
+                <Route path={PATH.JUNIOR} element={<Junior/>}/>
+                <Route path={'/*'} element={<Error404/>}/>
 
+
+                <Route path={'/'} element={<Navigate to={PATH.JUNIOR_PLUS}/>}/>
+                <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
+                <Route path={'/*'} element={<Error404/>}/>
                 {/*роуты для /pre-junior, /junior, /junior-plus*/}
                 {/*<Route ...*/}
                 {/*<Route ...*/}
