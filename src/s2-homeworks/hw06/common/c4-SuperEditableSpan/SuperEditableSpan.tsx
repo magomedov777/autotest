@@ -22,7 +22,6 @@ type SuperEditableSpanType = Omit<DefaultInputPropsType, 'type'> & {
     onChangeText?: (value: string) => void
     onEnter?: () => void
     error?: string
-    id: string
     spanProps?: DefaultSpanPropsType  & {defaultText?: string}// пропсы для спана
 }
 
