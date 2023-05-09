@@ -36,7 +36,7 @@ const HW6 = () => {
                         spanProps={{
                             id: 'hw6-editable-span',
                             defaultText: 'enter text...',
-                            children: value ? undefined : 'enter text'
+                            // children: value ? undefined : 'enter text'
                         }}
                     />
                 </div>
