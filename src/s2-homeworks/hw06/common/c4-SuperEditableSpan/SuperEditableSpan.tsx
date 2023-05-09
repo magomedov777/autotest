@@ -88,7 +88,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
 
-                        l{children || restProps.value || defaultText}
+                        {children || restProps.value || defaultText}
                     </span>
                 </div>
             )}
