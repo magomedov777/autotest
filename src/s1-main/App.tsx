@@ -9,6 +9,7 @@ import HW8 from '../s2-homeworks/hw08/HW8';
 import HW9 from '../s2-homeworks/hw09/HW9';
 import HW10 from '../s2-homeworks/hw10/HW10';
 import HW11 from '../s2-homeworks/hw11/HW11';
+import HW12 from '../s2-homeworks/hw12/HW12';
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
             <HW9/>
             <HW10/>
             <HW11/>
+            <HW12/>
         </div>
     )
 }
