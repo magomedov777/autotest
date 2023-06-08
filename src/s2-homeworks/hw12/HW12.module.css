@@ -1,14 +1,14 @@
-[data-theme='1'] {
+[data-theme=1] {
     --color: #000000;
     --background: #FFFFFF;
 }
 
-[data-theme='2'] {
+[data-theme=2] {
     --color: #000000;
     --background: #DDEEFF;
 }
 
-[data-theme='3'] {
+[data-theme=3] {
     --color: #FFFFFF;
     --background: #212A34;
 }
@@ -19,5 +19,8 @@ html {
 }
 
 .select {
-
+    font-size: 20px;
+    margin-top: 20px;
+width: 150px;
+    height: 35px;
 }
