@@ -1,26 +1,23 @@
-[data-theme='1'] {
-    --color: #000000;
-    --background: #FFFFFF;
+.dark {
+    background: dimgrey;
 }
 
-[data-theme='2'] {
-    --color: #000000;
-    --background: #DDEEFF;
+.dark-text {
+    color: aliceblue;
 }
 
-[data-theme='3'] {
-    --color: #FFFFFF;
-    --background: #212A34;
+.red {
+    background: lightcoral;
 }
 
-html {
-    background-color: var(--background);
-    color: var(--color);
+.red-text {
+    color: aqua;
 }
 
-.select {
-    font-size: 20px;
-    margin-top: 20px;
-width: 150px;
-    height: 35px;
+.some {
+    background: lightgreen;
+}
+
+.some-text {
+    color: darkslateblue;
 }
