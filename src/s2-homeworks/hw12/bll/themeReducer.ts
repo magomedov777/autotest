@@ -14,7 +14,7 @@ export const themeReducer = (state:InitStateType = initState, action: ActionType
         // дописать
 
         default:
-            return state
+            return initState
     }
 }
 
