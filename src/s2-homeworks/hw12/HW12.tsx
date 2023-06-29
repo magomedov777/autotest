@@ -5,6 +5,7 @@ import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux'
 import {changeThemeId} from './bll/themeReducer'
 import {AppStoreType} from '../hw10/bll/store';
+import { log } from 'console'
 
 /*
 * 1 - в файле themeReducer.ts написать нужные типы вместо any, дописать редьюсер
@@ -26,9 +27,9 @@ const HW12 = () => {
     const dispatch = useDispatch()
     // const themeId = 1
 
-    const change = (id: number) => {
+    const change = (id: string) => {
         // дописать функцию
-        dispatch(changeThemeId(id))
+        dispatch(changeThemeId(+id))
     }
 
     useEffect(() => {
